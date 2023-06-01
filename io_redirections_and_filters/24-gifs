@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name "*.gif" -exec sh -c 'echo "${0%.*}"' '{}' \+ | sort -f -u > .Kfile_2
+find -type f -name "*.git" | rev | cut -d "/" -f 1 | cut -d ' 2- | rev | LC_ALL=C sort -f 
