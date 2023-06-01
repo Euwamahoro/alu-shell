@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -iname "*.gif" -exec basename {} \; | rev | while IFS= read -r line; do echo "${line::-4}"; done | sort -r | rev
+find . -type f -name "*.gif" | sed -e 's/\.gif$//' | sort -f | xargs -I {} basename {} -a echo
