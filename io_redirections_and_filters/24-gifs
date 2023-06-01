@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -iname "*.gif" -printf "%f\n" | awk -F. '{print substr($0, 1, length($0)-4)}' | sort -r | rev
+find . -type f -iname "*.gif" -exec basename {} \; | rev | while IFS= read -r line; do echo "${line::-4}"; done | sort -r | rev
