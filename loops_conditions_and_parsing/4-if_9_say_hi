@@ -5,9 +5,9 @@ while [ $i -le 10 ]
 do
     if [ $i -ne 9 ]
     then
-	echo "Holberton School"
+	echo "Best School"
     else
-	echo -e "Holberton School\nHi"
+	echo -e "Best School\nHi"
     fi
     i=$((i + 1))
 done
